@@ -61,7 +61,7 @@ internal class DebugConfigurationManager {
     }
 
     // MARK: Private Methods
-    
+
     private func presentViewController(viewControllerToDisplay: UIViewController) {
         guard let presentingViewController = yoshiRootViewController else { return }
         presentingViewController
@@ -136,10 +136,11 @@ extension DebugConfigurationManager: DebugTableViewControllerDelegate {
 
 extension UIResponder {
 
+    struct Static {
+        static var token: dispatch_once_t = 0
+    }
+
     public override class func initialize() {
-        struct Static {
-            static var token: dispatch_once_t = 0
-        }
 
         // make sure this isn't a subclass
         if self !== UIResponder.self {

@@ -10,6 +10,8 @@ import UIKit
 
 public enum InvocationEvent {
     case ShakeMotion
+    case MultiTouch
+    case ForceTouch
 }
 
 public class DebugMenu {

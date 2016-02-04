@@ -16,6 +16,7 @@ internal class DebugConfigurationManager {
     var inDebugMenu: Bool = false
     var didInvokeStart: Bool = false
     var yoshiInvocationEvent: InvocationEvent = .ShakeMotion
+    var touchInvocationminimumTouchRequirement = 3
     let debugAlertController =
     UIAlertController(title: AppBundleUtility.appVersionText(), message: nil, preferredStyle: .ActionSheet)
     var yoshiMenuItems = [YoshiMenu]()
@@ -135,19 +136,13 @@ extension DebugConfigurationManager: DebugTableViewControllerDelegate {
 }
 
 extension UIResponder {
-
     struct Static {
         static var token: dispatch_once_t = 0
     }
 
     public override class func initialize() {
-
         // make sure this isn't a subclass
         if self !== UIResponder.self {
-            return
-        }
-
-        guard DebugConfigurationManager.sharedInstance.yoshiInvocationEvent == InvocationEvent.ShakeMotion else {
             return
         }
 
@@ -155,6 +150,12 @@ extension UIResponder {
             UIResponder.setupSwizzle(
                 Selector("motionBegan:withEvent:"),
                 swizzledSelector: Selector("debugMotionBegan:withEvent:"))
+            UIResponder.setupSwizzle(
+                Selector("touchesBegan:withEvent:"),
+                swizzledSelector: Selector("debugTouchesBegan:withEvent:"))
+            UIResponder.setupSwizzle(
+                Selector("touchesMoved:withEvent:"),
+                swizzledSelector: Selector("debugTouchesMoved:withEvent:"))
         }
     }
 
@@ -181,10 +182,50 @@ extension UIResponder {
 
     // MARK: - Method Swizzling
     func debugMotionBegan(motion: UIEventSubtype, withEvent event: UIEvent?) {
-        guard !DebugConfigurationManager.sharedInstance.inDebugMenu
-        && DebugConfigurationManager.sharedInstance.didInvokeStart else { return }
-
+        guard DebugConfigurationManager.sharedInstance.yoshiInvocationEvent == .ShakeMotion
+            && !DebugConfigurationManager.sharedInstance.inDebugMenu else { return }
         DebugConfigurationManager.sharedInstance.showDebugActionSheet()
-        debugMotionBegan(motion, withEvent: event)
+
+        defer { debugMotionBegan(motion, withEvent: event) }
     }
+
+    func debugTouchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
+        print(event?.allTouches()?.count)
+        switch DebugConfigurationManager.sharedInstance.yoshiInvocationEvent {
+        case .MultiTouch:
+            showDebugMenuForMultiTouch(event)
+        case .ForceTouch:
+            showDebugMenuForForceTouch(event)
+        default:
+            break
+        }
+
+        defer { debugTouchesBegan(touches, withEvent: event) }
+    }
+
+    func debugTouchesMoved(touches: Set<UITouch>, withEvent event: UIEvent?) {
+        showDebugMenuForForceTouch(event)
+        defer { debugTouchesMoved(touches, withEvent: event) }
+    }
+
+    private func showDebugMenuForMultiTouch(event: UIEvent?) {
+        guard DebugConfigurationManager.sharedInstance.yoshiInvocationEvent == .MultiTouch
+            && DebugConfigurationManager.sharedInstance.didInvokeStart
+            && event?.allTouches()?.count >= DebugConfigurationManager.sharedInstance.touchInvocationminimumTouchRequirement
+            && !DebugConfigurationManager.sharedInstance.inDebugMenu else { return }
+        DebugConfigurationManager.sharedInstance.showDebugActionSheet()
+    }
+
+    private func showDebugMenuForForceTouch(event: UIEvent?) {
+        guard DebugConfigurationManager.sharedInstance.yoshiInvocationEvent == .ForceTouch
+            && DebugConfigurationManager.sharedInstance.didInvokeStart
+            && event?.allTouches()?.filter({ (touch) -> Bool in
+                guard #available(iOS 9.0, *) else { return false }
+                print("force = \(touch.force)")
+                return touch.force >= touch.maximumPossibleForce / 2
+            }).count > 0
+            && !DebugConfigurationManager.sharedInstance.inDebugMenu else { return }
+        DebugConfigurationManager.sharedInstance.showDebugActionSheet()
+    }
+    
 }

@@ -55,7 +55,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
 
         let customMenu = CustomMenu(debugMenuName: "Custom", setup: setup, completion: completion)
-        DebugMenu.startWithInvokeEvent(.ShakeMotion, menuItems: [tableViewMenu, dateSelector, customMenu])
+        DebugMenu.startWithInvokeEvent(.ForceTouch, menuItems: [tableViewMenu, dateSelector, customMenu])
     }
     
 }

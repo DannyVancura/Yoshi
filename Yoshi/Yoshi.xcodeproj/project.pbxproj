@@ -17,6 +17,12 @@
 		276BCEC11C29AEDD002138C7 /* Yoshi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 276BCEC01C29AEDD002138C7 /* Yoshi.swift */; };
 		27A9523F1C29F29C00F0CCEB /* DebugMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A9523E1C29F29C00F0CCEB /* DebugMenu.swift */; };
 		27A952411C29F42800F0CCEB /* DebugConfigurationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A952401C29F42800F0CCEB /* DebugConfigurationManager.swift */; };
+		27D925A21C63F8FE00784885 /* AppBundleUtilitySpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27D925A11C63F8FE00784885 /* AppBundleUtilitySpec.swift */; };
+		27D925AA1C6414BA00784885 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27D925A91C6414BA00784885 /* AppDelegate.swift */; };
+		27D925AC1C6414BA00784885 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27D925AB1C6414BA00784885 /* ViewController.swift */; };
+		27D925AF1C6414BA00784885 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27D925AD1C6414BA00784885 /* Main.storyboard */; };
+		27D925B11C6414BA00784885 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 27D925B01C6414BA00784885 /* Assets.xcassets */; };
+		27D925B41C6414BA00784885 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27D925B21C6414BA00784885 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -26,6 +32,13 @@
 			proxyType = 1;
 			remoteGlobalIDString = 276BCEA01C29A6EF002138C7;
 			remoteInfo = Yoshi;
+		};
+		27D925B91C6414C600784885 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 276BCE981C29A6EF002138C7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 27D925A61C6414BA00784885;
+			remoteInfo = YoshiTestRunner;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -37,12 +50,21 @@
 		276BCEA41C29A6EF002138C7 /* Yoshi.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Yoshi.h; sourceTree = "<group>"; };
 		276BCEA61C29A6EF002138C7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		276BCEAB1C29A6EF002138C7 /* YoshiTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = YoshiTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		276BCEB21C29A6EF002138C7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		276BCEB21C29A6EF002138C7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = YoshiTests/Info.plist; sourceTree = "<group>"; };
 		276BCEBC1C29A97E002138C7 /* DebugTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DebugTableViewController.swift; path = "View Controllers/Debug Table View Controller/DebugTableViewController.swift"; sourceTree = "<group>"; };
 		276BCEBD1C29A97E002138C7 /* DebugTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = DebugTableViewController.xib; path = "View Controllers/Debug Table View Controller/DebugTableViewController.xib"; sourceTree = "<group>"; };
 		276BCEC01C29AEDD002138C7 /* Yoshi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Yoshi.swift; sourceTree = "<group>"; };
 		27A9523E1C29F29C00F0CCEB /* DebugMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DebugMenu.swift; sourceTree = "<group>"; };
 		27A952401C29F42800F0CCEB /* DebugConfigurationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DebugConfigurationManager.swift; sourceTree = "<group>"; };
+		27D925A01C63F8FE00784885 /* YoshiTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "YoshiTests-Bridging-Header.h"; sourceTree = "<group>"; };
+		27D925A11C63F8FE00784885 /* AppBundleUtilitySpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppBundleUtilitySpec.swift; path = Utility/AppBundleUtilitySpec.swift; sourceTree = "<group>"; };
+		27D925A71C6414BA00784885 /* YoshiTestRunner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YoshiTestRunner.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		27D925A91C6414BA00784885 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		27D925AB1C6414BA00784885 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		27D925AE1C6414BA00784885 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		27D925B01C6414BA00784885 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		27D925B31C6414BA00784885 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		27D925B51C6414BA00784885 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +80,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				276BCEAC1C29A6EF002138C7 /* Yoshi.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		27D925A41C6414BA00784885 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -95,6 +124,8 @@
 			children = (
 				276BCEA31C29A6EF002138C7 /* Yoshi */,
 				276BCEAF1C29A6EF002138C7 /* YoshiTests */,
+				276BCEB21C29A6EF002138C7 /* Info.plist */,
+				27D925A81C6414BA00784885 /* YoshiTestRunner */,
 				276BCEA21C29A6EF002138C7 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -104,6 +135,7 @@
 			children = (
 				276BCEA11C29A6EF002138C7 /* Yoshi.framework */,
 				276BCEAB1C29A6EF002138C7 /* YoshiTests.xctest */,
+				27D925A71C6414BA00784885 /* YoshiTestRunner.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -111,13 +143,13 @@
 		276BCEA31C29A6EF002138C7 /* Yoshi */ = {
 			isa = PBXGroup;
 			children = (
-				276BCEBB1C29A8BB002138C7 /* View Controllers */,
-				276BCEA41C29A6EF002138C7 /* Yoshi.h */,
-				276BCEA61C29A6EF002138C7 /* Info.plist */,
-				276BCEC01C29AEDD002138C7 /* Yoshi.swift */,
+				27A952401C29F42800F0CCEB /* DebugConfigurationManager.swift */,
 				27A9523E1C29F29C00F0CCEB /* DebugMenu.swift */,
 				27100A9A1C3B1A9800074B2A /* Utility */,
-				27A952401C29F42800F0CCEB /* DebugConfigurationManager.swift */,
+				276BCEBB1C29A8BB002138C7 /* View Controllers */,
+				276BCEA41C29A6EF002138C7 /* Yoshi.h */,
+				276BCEC01C29AEDD002138C7 /* Yoshi.swift */,
+				276BCEA61C29A6EF002138C7 /* Info.plist */,
 			);
 			path = Yoshi;
 			sourceTree = "<group>";
@@ -125,7 +157,8 @@
 		276BCEAF1C29A6EF002138C7 /* YoshiTests */ = {
 			isa = PBXGroup;
 			children = (
-				276BCEB21C29A6EF002138C7 /* Info.plist */,
+				27D9259F1C63F8CB00784885 /* Utility */,
+				27D925A01C63F8FE00784885 /* YoshiTests-Bridging-Header.h */,
 			);
 			path = YoshiTests;
 			sourceTree = "<group>";
@@ -137,6 +170,27 @@
 				2746E64A1C2C7A24006C1DEF /* Debug Table View Controller */,
 			);
 			name = "View Controllers";
+			sourceTree = "<group>";
+		};
+		27D9259F1C63F8CB00784885 /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				27D925A11C63F8FE00784885 /* AppBundleUtilitySpec.swift */,
+			);
+			name = Utility;
+			sourceTree = "<group>";
+		};
+		27D925A81C6414BA00784885 /* YoshiTestRunner */ = {
+			isa = PBXGroup;
+			children = (
+				27D925A91C6414BA00784885 /* AppDelegate.swift */,
+				27D925AB1C6414BA00784885 /* ViewController.swift */,
+				27D925AD1C6414BA00784885 /* Main.storyboard */,
+				27D925B01C6414BA00784885 /* Assets.xcassets */,
+				27D925B21C6414BA00784885 /* LaunchScreen.storyboard */,
+				27D925B51C6414BA00784885 /* Info.plist */,
+			);
+			path = YoshiTestRunner;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -184,11 +238,29 @@
 			);
 			dependencies = (
 				276BCEAE1C29A6EF002138C7 /* PBXTargetDependency */,
+				27D925BA1C6414C600784885 /* PBXTargetDependency */,
 			);
 			name = YoshiTests;
 			productName = YoshiTests;
 			productReference = 276BCEAB1C29A6EF002138C7 /* YoshiTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		27D925A61C6414BA00784885 /* YoshiTestRunner */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 27D925B61C6414BA00784885 /* Build configuration list for PBXNativeTarget "YoshiTestRunner" */;
+			buildPhases = (
+				27D925A31C6414BA00784885 /* Sources */,
+				27D925A41C6414BA00784885 /* Frameworks */,
+				27D925A51C6414BA00784885 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = YoshiTestRunner;
+			productName = YoshiTestRunner;
+			productReference = 27D925A71C6414BA00784885 /* YoshiTestRunner.app */;
+			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
@@ -205,6 +277,10 @@
 					};
 					276BCEAA1C29A6EF002138C7 = {
 						CreatedOnToolsVersion = 7.2;
+						TestTargetID = 27D925A61C6414BA00784885;
+					};
+					27D925A61C6414BA00784885 = {
+						CreatedOnToolsVersion = 7.2.1;
 					};
 				};
 			};
@@ -214,6 +290,7 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				Base,
 			);
 			mainGroup = 276BCE971C29A6EF002138C7;
 			productRefGroup = 276BCEA21C29A6EF002138C7 /* Products */;
@@ -222,6 +299,7 @@
 			targets = (
 				276BCEA01C29A6EF002138C7 /* Yoshi */,
 				276BCEAA1C29A6EF002138C7 /* YoshiTests */,
+				27D925A61C6414BA00784885 /* YoshiTestRunner */,
 			);
 		};
 /* End PBXProject section */
@@ -240,6 +318,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		27D925A51C6414BA00784885 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				27D925B41C6414BA00784885 /* LaunchScreen.storyboard in Resources */,
+				27D925B11C6414BA00784885 /* Assets.xcassets in Resources */,
+				27D925AF1C6414BA00784885 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -280,6 +368,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				27D925A21C63F8FE00784885 /* AppBundleUtilitySpec.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		27D925A31C6414BA00784885 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				27D925AC1C6414BA00784885 /* ViewController.swift in Sources */,
+				27D925AA1C6414BA00784885 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -291,7 +389,31 @@
 			target = 276BCEA01C29A6EF002138C7 /* Yoshi */;
 			targetProxy = 276BCEAD1C29A6EF002138C7 /* PBXContainerItemProxy */;
 		};
+		27D925BA1C6414C600784885 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 27D925A61C6414BA00784885 /* YoshiTestRunner */;
+			targetProxy = 27D925B91C6414C600784885 /* PBXContainerItemProxy */;
+		};
 /* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		27D925AD1C6414BA00784885 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				27D925AE1C6414BA00784885 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		27D925B21C6414BA00784885 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				27D925B31C6414BA00784885 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		276BCEB31C29A6EF002138C7 /* Debug */ = {
@@ -421,19 +543,50 @@
 		276BCEB91C29A6EF002138C7 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = YoshiTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.prolificinteractive.YoshiTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "YoshiTests/YoshiTests-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/YoshiTestRunner.app/YoshiTestRunner";
 			};
 			name = Debug;
 		};
 		276BCEBA1C29A6EF002138C7 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = YoshiTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.prolificinteractive.YoshiTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "YoshiTests/YoshiTests-Bridging-Header.h";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/YoshiTestRunner.app/YoshiTestRunner";
+			};
+			name = Release;
+		};
+		27D925B71C6414BA00784885 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = YoshiTestRunner/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.prolificinteractive.HBC.YoshiTestRunner;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		27D925B81C6414BA00784885 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = YoshiTestRunner/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.prolificinteractive.HBC.YoshiTestRunner;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -464,6 +617,15 @@
 			buildConfigurations = (
 				276BCEB91C29A6EF002138C7 /* Debug */,
 				276BCEBA1C29A6EF002138C7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		27D925B61C6414BA00784885 /* Build configuration list for PBXNativeTarget "YoshiTestRunner" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				27D925B71C6414BA00784885 /* Debug */,
+				27D925B81C6414BA00784885 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
